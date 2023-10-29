@@ -69,7 +69,7 @@ def main():
 
     # main program
     while True:
-        print('\n\n\nBasic Functions of Middle School Mathematics')
+        print('\n\nBasic Functions of Middle School Mathematics')
         print('(Only numeric input is supported, otherwise the program will exit automatically.)')
         print("\n----------------------")
         print('1: Uni-variate Function')

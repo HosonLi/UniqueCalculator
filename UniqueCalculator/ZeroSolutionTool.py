@@ -3,9 +3,9 @@ from math import sqrt
 
 
 def zero_solution_tool():
-	print("\nZero Solution Tool")
-	print('\n(Only numeric input is supported, otherwise the program will exit automatically.)')
-	print("Please enter the coefficient (eg. ax^2 + bx + c = 0).")
+	print("\n\n\nZero Solution Tool")
+	print('(Only numeric input is supported, otherwise the program will exit automatically.)')
+	print("\nPlease enter the coefficient (eg. ax^2 + bx + c = 0).")
 	a = Decimal(input("a ="))
 	b = Decimal(input("b ="))
 	c = Decimal(input("c ="))

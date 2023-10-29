@@ -7,7 +7,7 @@ import Function
 import Database
 import Management
 import ZeroSolutionTool
-import AdvancedMode
+import DataProcessing
 
 
 # load
@@ -114,7 +114,7 @@ while True:
 	print('3: Number (Command Line)')
 	print('4: Basic Functions of Middle School Mathematics')
 	print('5: Zero Solution Tool')
-	print('6: Advanced Mode')
+	print('6: Data Processing')
 	print('7: Exit')
 	ChoosePattern = input('\nPlease choose pattern:')
 
@@ -171,7 +171,7 @@ while True:
 
 	if ChoosePattern == '6':
 		try:
-			AdvancedMode.advanced()
+			DataProcessing.main()
 			continue
 		except FileNotFoundError:
 			print('\nMaybe there are some problems, please try again.')
