@@ -5,7 +5,7 @@ def main():
     x = []
     dx2 = []
 
-    print('\n\nData Processing')
+    print('\n\nExperimental Data Processing')
     print('(Only numeric input is supported, otherwise the program will exit automatically.)')
     print("\nPlease input right number:")
     n = input("n = ")

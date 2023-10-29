@@ -114,7 +114,7 @@ while True:
 	print('3: Number (Command Line)')
 	print('4: Basic Functions of Middle School Mathematics')
 	print('5: Zero Solution Tool')
-	print('6: Data Processing')
+	print('6: Experimental Data Processing')
 	print('7: Exit')
 	ChoosePattern = input('\nPlease choose pattern:')
 
@@ -166,9 +166,15 @@ while True:
 
 	# entry ZeroSolutionTool
 	if ChoosePattern == '5':
-		ZeroSolutionTool.zero_solution_tool()
-		continue
+		try:
+			ZeroSolutionTool.zero_solution_tool()
+			continue
+		except FileNotFoundError:
+			print('\nMaybe there are some problems, please try again.')
+			print('Error code: FileNotFoundError')
+			continue
 
+	# entry DataProcessing
 	if ChoosePattern == '6':
 		try:
 			DataProcessing.main()
