@@ -1,6 +1,7 @@
 import numpy
 import math
 
+
 def main():
     x = []
     dx2 = []
@@ -34,7 +35,11 @@ def main():
         dx2.append(dx2n)
     s = math.sqrt(numpy.sum(dx2) / (int(n) - 1))
     print("S =", s)
-    ua = s / math.sqrt(int(n))
+
+    # Which calculation method to use depends on the experimental requirements
+    # ua = s / math.sqrt(int(n))
+    ua = s
+
     print("ua =", ua)
     print("ub =", ub)
     u = math.sqrt(ua ** 2 + ub ** 2)
