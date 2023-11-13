@@ -9,3 +9,6 @@ Manage Mode (Username: Administators , Password: zdthmxrynfnbr)
 Calculation of zero points of a quadratic function of one variable  
 Experimental Data Processing  
 Easy to Use
+
+# How to Use
+Run "Calculator.py"
