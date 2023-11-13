@@ -13,7 +13,7 @@ def main():
         print("This function is 'y =", k, "x +", b, "'.")
         x = Decimal(input('x = '))
         print('y =', (k * x) + b)
-        input("Please press 'Enter' to continue.")
+        input("\nPlease press 'Enter' to continue.")
 
     def uni_variate_quadratic_function():
         print('\neg. y = ax*x + bx + c')
@@ -23,7 +23,7 @@ def main():
         print("This function is 'y =", a, "x*x +", b, "x +", c, "'.")
         x = Decimal(input('x = '))
         print('y =', a * (x * x) + (b * x) + c)
-        input("Please press 'Enter' to continue.")
+        input("\nPlease press 'Enter' to continue.")
 
     def inverse_proportional_function():
         print('\neg. y = a / x + b')
@@ -32,7 +32,7 @@ def main():
         print("This function is 'y =", a, "/ x +", b, "'.")
         x = Decimal(input('x = '))
         print('y =', (a / x) + b)
-        input("Please press 'Enter' to continue.")
+        input("\nPlease press 'Enter' to continue.")
 
     def trigonometric_function():
         print('\neg. y = sin(x) / y = cos(x) / y = tan(x) ')
@@ -41,7 +41,7 @@ def main():
         print('y = sin(', x, ') =', math.sin(x))
         print('y = cos(', x, ') =', math.cos(x))
         print('y = tan(', x, ') =', math.tan(x))
-        input("Please press 'Enter' to continue.")
+        input("\nPlease press 'Enter' to continue.")
 
     def exponential_function():
         print('\neg. y = a ^ x')
@@ -49,7 +49,7 @@ def main():
         print("This function is 'y =", a, "^ x'.")
         x = Decimal(input('x = '))
         print('y =', a ** x)
-        input("Please press 'Enter' to continue.")
+        input("\nPlease press 'Enter' to continue.")
 
     def logarithmic_function():
         print('\neg. y = ln(x)')
@@ -57,7 +57,7 @@ def main():
               'the natural logarithm.')
         x = Decimal(input('x = '))
         print('y =', math.log(x))
-        input("Please press 'Enter' to continue.")
+        input("\nPlease press 'Enter' to continue.")
 
     def power_function():
         print('\neg. y = x ^ a')
@@ -65,7 +65,7 @@ def main():
         print("This function is 'y = x ^", a, "' .")
         x = Decimal(input('x = '))
         print('y =', x ** a)
-        input("Please press 'Enter' to continue.")
+        input("\nPlease press 'Enter' to continue.")
 
     # main program
     while True:
@@ -82,7 +82,7 @@ def main():
         print('8: Exit Basic Function of Intermediate Mathematical')
         print('9: Exit Calculator')
 
-        choose = input('\nPlease choose pattern:')
+        choose = input('\nPlease choose pattern: ')
 
         if choose == '1':
             uni_variate_function()
@@ -122,5 +122,5 @@ def main():
 
         else:
             print('\nPlease input right number!')
-            input("Please press 'Enter' to continue.")
+            input("\nPlease press 'Enter' to continue.")
             continue

@@ -8,6 +8,7 @@ import Database
 import Management
 import ZeroSolutionTool
 import DataProcessing
+import GraphLine
 
 
 # load
@@ -41,12 +42,12 @@ data['Administrator'] = 'zdthmxrynfnbr'
 print('Calculator'.center(50, '='))
 
 
-Username = input('\nUsername:')
+Username = input('\nUsername: ')
 
 
 # judge if "UserName" is none
 while len(Username) == 0:
-	Username = input('Username:')
+	Username = input('Username: ')
 	if len(Username) > 0:
 		break
 	else:
@@ -55,7 +56,7 @@ while len(Username) == 0:
 times = 5
 while len(Username) > 0:
 
-	Password = input('Password ( you have only ' + str(times) + ' times ):')
+	Password = input('Password ( you have only ' + str(times) + ' times ): ')
 
 	# what times the user tried
 	if int(times) == 1:
@@ -91,7 +92,7 @@ while len(Username) > 0:
 
 
 if Username == 'Administrator':
-	Administration = input('\nEntry the management model?[y/n]:')
+	Administration = input('\nEntry the management model?[y/n]: ')
 	if Administration == 'y':
 		Management.management_model()
 	elif Administration == 'n':
@@ -114,9 +115,10 @@ while True:
 	print('3: Number (Command Line)')
 	print('4: Basic Functions of Middle School Mathematics')
 	print('5: Zero Solution Tool')
-	print('6: Experimental Data Processing')
-	print('7: Exit')
-	ChoosePattern = input('\nPlease choose pattern:')
+	print('6: Experimental Data Processing (Truth Expression)')
+	print('7: Experimental Data Processing (Least-Squares Fit)')
+	print('8: Exit')
+	ChoosePattern = input('\nPlease choose pattern: ')
 
 	# version information
 	if ChoosePattern == '1':
@@ -129,7 +131,7 @@ while True:
 		continue
 
 	# entry windows calculator
-	if ChoosePattern == '2':
+	elif ChoosePattern == '2':
 		try:
 			os.system('C:/WINDOWS/System32/calc.exe')
 			continue
@@ -139,7 +141,7 @@ while True:
 			continue
 
 	# entry calculation formula
-	if ChoosePattern == '3':
+	elif ChoosePattern == '3':
 		print("\nPS: You can input 'exit' to exit!\n")
 		while True:
 			number = input('Number > ')
@@ -155,7 +157,7 @@ while True:
 		continue
 
 	# entry Function
-	if ChoosePattern == '4':
+	elif ChoosePattern == '4':
 		try:
 			Function.main()
 			continue
@@ -165,7 +167,7 @@ while True:
 			continue
 
 	# entry ZeroSolutionTool
-	if ChoosePattern == '5':
+	elif ChoosePattern == '5':
 		try:
 			ZeroSolutionTool.zero_solution_tool()
 			continue
@@ -175,7 +177,7 @@ while True:
 			continue
 
 	# entry DataProcessing
-	if ChoosePattern == '6':
+	elif ChoosePattern == '6':
 		try:
 			DataProcessing.main()
 			continue
@@ -184,7 +186,16 @@ while True:
 			print('Error code: FileNotFoundError')
 			continue
 
-	if ChoosePattern == '7':
+	elif ChoosePattern == '7':
+		try:
+			GraphLine.main()
+			continue
+		except FileNotFoundError:
+			print('\nMaybe there are some problems, please try again.')
+			print('Error code: FileNotFoundError')
+			continue
+
+	elif ChoosePattern == '8':
 		print('\nCalculator will exit 2 seconds later!')
 		time.sleep(2)
 		sys.exit()

@@ -15,22 +15,22 @@ def management_model():
 		print('4: Exit Management Model')
 		print('5: Exit Calculator')
 
-		choose = input('\nPlease choose pattern:')
+		choose = input('\nPlease choose pattern: ')
 
 		if choose is None:
 			print('Please write right number!')
 			continue
 
-		if choose == '1':
+		elif choose == '1':
 			print('\n\n~~~~~~~~~~~~~~~~~~~~~~')
 			print('Calculator Information')
 			print('\nSimple and Pure')
 			print('This is Calculator.')
 			print('We stick to the simple and pure original heart.')
 			print('Our goal is to create a convenient and fast computing experience.')
-			input("\nPlease press 'Enter' to continue")
+			input("\nPlease press 'Enter' to continue.")
 
-		if choose == '2':
+		elif choose == '2':
 			print('\n\n~~~~~~~~~~~~~~~~~~~~~~')
 			print('Account and Password')
 			try:
@@ -60,10 +60,10 @@ def management_model():
 				print('2: Add')
 				print('3: Reset')
 				print('4: Exit')
-				choose_account = input('\nPlease choose:')
+				choose_account = input('\nPlease choose: ')
 				if choose_account == '1':
 					while True:
-						delete_account = input('\nPlease write which account you want to delete:')
+						delete_account = input('\nPlease write which account you want to delete: ')
 						try:
 							data.pop(delete_account)
 							print('Successfully delete!')
@@ -72,17 +72,17 @@ def management_model():
 							print("We can't find this account!\nPlease try again!")
 							continue
 					continue
-				if choose_account == '2':
-					add_account = input('\nPlease write which account you want to add:')
-					add_account_password = input('Please write your password of this account:')
+				elif choose_account == '2':
+					add_account = input('\nPlease write which account you want to add: ')
+					add_account_password = input('Please write your password of this account: ')
 					data[add_account] = add_account_password
 					print('Successfully add!')
 					continue
-				if choose_account == '3':
+				elif choose_account == '3':
 					while True:
-						reset_account = input('\nPlease write which account you want to reset:')
+						reset_account = input('\nPlease write which account you want to reset: ')
 						if reset_account in data:
-							reset_account_password = input('Please write your new password of this account:')
+							reset_account_password = input('Please write your new password of this account: ')
 							data[reset_account] = reset_account_password
 							print('Successfully reset!')
 							break
@@ -90,7 +90,7 @@ def management_model():
 							print('\nPlease write right account!')
 							continue
 					continue
-				if choose_account == '4':
+				elif choose_account == '4':
 					break
 				else:
 					print('\nPlease write right number!')
@@ -100,7 +100,7 @@ def management_model():
 				save_file.close()
 			print('\nSuccessfully saved all of the setting!')
 
-		if choose == '3':
+		elif choose == '3':
 			print("\nPS: You can input 'exit' to exit!")
 			print("You can only enter an executable Python command or internal command!\n")
 			while True:
@@ -117,10 +117,10 @@ def management_model():
 					continue
 			continue
 
-		if choose == '4':
+		elif choose == '4':
 			return
 
-		if choose == '5':
+		elif choose == '5':
 			print('\nCalculator will exit 2 seconds later!')
 			time.sleep(2)
 			sys.exit()
