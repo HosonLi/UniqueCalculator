@@ -12,7 +12,13 @@ def main():
     print("\n\nGraph Line")
     print('(Only numeric input is supported, otherwise the program will exit automatically.)')
     print("\nPlease input right number:")
-    n = input("n = ")
+    while True:
+        n = float(input("n = "))
+        if int(n) > 1:
+            break
+        else:
+            print("Insufficient data!")
+            continue
     for i in range(1, int(n) + 1):
         xn = input("x%d = " %i)
         x.append(float(xn))
@@ -50,6 +56,7 @@ def main():
     # Draw fitting curve
     plt.scatter(xa, ya)
     plt.plot(xa, slope * xa + intercept, color='red')
+
 
     plt.show()
 

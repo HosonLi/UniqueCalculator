@@ -9,7 +9,7 @@ def main():
     print('\n\nExperimental Data Processing')
     print('(Only numeric input is supported, otherwise the program will exit automatically.)')
     print("\nPlease input right number:")
-    n = input("n = ")
+    n = float(input("n = "))
     for i in range(1, int(n) + 1):
         xn = input("x%d = " %i)
         x.append(float(xn))
