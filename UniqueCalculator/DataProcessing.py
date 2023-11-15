@@ -11,7 +11,7 @@ def main():
     print("\nPlease input right number:")
     n = float(input("n = "))
     for i in range(1, int(n) + 1):
-        xn = input("x%d = " %i)
+        xn = input("x%d = " % i)
         x.append(float(xn))
     print("\n---------------------")
     print("1. Instrumental Error")
@@ -31,14 +31,14 @@ def main():
     print("mean =", x_mean)
     for i in range(0, int(n)):
         dx2n = (x[i] - x_mean) ** 2
-        print("dx2%d =" %(i + 1), dx2n)
+        print("dx2%d =" % (i + 1), dx2n)
         dx2.append(dx2n)
     s = math.sqrt(numpy.sum(dx2) / (int(n) - 1))
     print("S =", s)
 
     # Which calculation method to use depends on the experimental requirements
-    # ua = s / math.sqrt(int(n))
-    ua = s
+    ua = s / math.sqrt(int(n))
+    # ua = s
 
     print("ua =", ua)
     print("ub =", ub)
