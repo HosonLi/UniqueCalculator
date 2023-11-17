@@ -37,8 +37,8 @@ def main():
     print("S =", s)
 
     # Which calculation method to use depends on the experimental requirements
-    ua = s / math.sqrt(int(n))
-    # ua = s
+    # ua = s / math.sqrt(int(n))
+    ua = s
 
     print("ua =", ua)
     print("ub =", ub)
